@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/index.min.css" />
+    <title>Форма обратной связи</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form">
+        <h1 class="form__title">Обратная форма</h1>
+        <div class="wrapper-fields">
+          <div class="form__field">
+            <input
+              class="input"
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Епифан"
+            />
+            <label class="input__label" for="name">ФИО</label>
+            <div class="input__error"></div>
+          </div>
+          <div class="form__field">
+            <input
+              class="input"
+              id="phone"
+              type="tel"
+              name="phone"
+              placeholder="+7 (423) 123-45-67"
+            />
+            <label class="input__label" for="phone">Телефон</label>
+            <div class="input__error"></div>
+          </div>
+          <div class="form__field">
+            <input
+              class="input"
+              id="mail"
+              type="email"
+              name="mail"
+              placeholder="mail@example.com"
+            />
+            <label class="input__label" for="mail">E-mail</label>
+            <div class="input__error"></div>
+          </div>
+          <div class="form__field">
+            <textarea
+              class="input"
+              id="message"
+              name="message"
+              placeholder="Напишете нам сообщение..."
+            ></textarea>
+            <label class="input__label" for="message">Сообщение</label>
+            <div class="input__error"></div>
+          </div>
+        </div>
+        <p class="text">
+          Отправляя форму, Вы соглашаетесь на
+          <a class="text__link" href="#">обработку персональных данных</a>
+        </p>
+        <button class="btn btn--submit" type="submit">Отправить</button>
+        <div class="wrapper-spinner"></div>
+      </form>
+      <dialog class="modal modal--success">
+        <div class="modal-wrapper">
+          <button class="btn btn--close">Закрыть</button>
+          <h2 class="modal__text">Форма успешно оправлена</h2>
+        </div>
+      </dialog>
+      <dialog class="modal modal--error">
+        <div class="modal-wrapper">
+          <button class="btn btn--close">Закрыть</button>
+          <h2 class="modal__text">Произошла ошибка, форма не отправлена!</h2>
+        </div>
+      </dialog>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.6.3/imask.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
