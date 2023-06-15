@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   //  Clear errors
   const removeErrors = (e) => {
     if (e.target.value) {
-      console.log(e.target.value.length)
       e.target.classList.remove('input--error')
       e.target.nextElementSibling.nextElementSibling.innerText = ''
     }
